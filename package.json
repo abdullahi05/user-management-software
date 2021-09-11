@@ -1,0 +1,23 @@
+{
+  "name": "user-management",
+  "version": "1.0.0",
+  "description": "user management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "abdullahi mohamed",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "csl": "0.0.0-reserved",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

@@ -1,0 +1,24 @@
+{{!-- going back home breadcrumbs --}}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item"><a href="/adduser">New User</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Edit User</li>
+    </ol>
+</nav>
+
+{{!-- input errors --}}
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ alert }}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+
+{{!-- edit user inputs section starts here --}}
+{{#each rows}}
+<form class="row g-3 needs-validation" method="POST" action="/edituser/{{this.id}}" novalidate>
+    {{> user-form}}
+</form>
+{{/each}}
